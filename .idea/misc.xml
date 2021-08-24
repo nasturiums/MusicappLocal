@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project_Androi/MusicAppLocal/app/src/main/res/drawable/ic_replay.xml" value="0.1638888888888889" />
+        <entry key="..\:/Project_Androi/MusicAppLocal/app/src/main/res/layout/activity_library.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Androi/MusicAppLocal/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Project_Androi/MusicAppLocal/app/src/main/res/layout/item_music.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cloud_burst">
+
+    <TextView
+        android:id="@+id/text_item_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="30"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/title_music_name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_23"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_item_music_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_item_music_name"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="@string/title_music_author"
+        android:textColor="@color/cornflower_blue"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_1"
+        android:maxLength="15"
+        android:background="@color/cornflower_blue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

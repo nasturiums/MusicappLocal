@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dorado">#5A5A5A</color>
+    <color name="cornflower_blue">#5B9AFF</color>
+    <color name="chambray">#355383</color>
+    <color name="cloud_burst">#BFDAEF</color>
+    <color name="big_stone">#192840</color>
 </resources>

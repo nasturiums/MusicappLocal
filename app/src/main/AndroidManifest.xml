@@ -2,15 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.musicapplocal">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.MusicAppLocal">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name="com.example.musicapplocal.ui.main.MainActivity"></activity>
+        <activity android:name="com.example.musicapplocal.ui.library.LibraryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <service android:name=".service.MusicPlayerService" />
+        <receiver android:name=".broadcast.MusicBroadcast" />
+    </application>
 </manifest>
