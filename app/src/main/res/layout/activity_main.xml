@@ -4,5 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.musicapplocal.ui.main.MainActivity"
+    android:background="@color/cloud_burst">
+
+    <TextView
+        android:id="@+id/text_main_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_20" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_playing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/sp_23"
+        android:layout_marginTop="@dimen/dp_18"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/text_main_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_menu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_main_round"
+        android:src="@drawable/backgroud_music"
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="@dimen/dp_280"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_back"
+        android:layout_marginTop="@dimen/dp_47" />
+
+    <TextView
+        android:id="@+id/text_main_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_music_name"
+        android:textSize="@dimen/sp_25"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_main_round"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/text_main_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_23"
+        android:text="@string/title_music_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_name"
+        android:textColor="@color/cornflower_blue"
+        android:layout_marginTop="@dimen/dp_6" />
+
+    <SeekBar
+        android:id="@+id/seek_main_time"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_author"
+        android:layout_marginTop="@dimen/dp_30"
+        android:thumb="@drawable/sb_custom_thumb"
+        android:progressDrawable="@drawable/sb_custom_progress"
+        android:minHeight="@dimen/dp_4"
+        android:maxHeight="@dimen/dp_4"
+        android:progress="50" />
+
+    <TextView
+        android:id="@+id/text_main_time_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_author"
+        android:layout_marginLeft="@dimen/dp_23"
+        style="@style/StyleTime" />
+
+    <TextView
+        android:id="@+id/text_main_time_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_author"
+        android:layout_marginRight="@dimen/dp_23"
+        style="@style/StyleTime" />
+
+    <TextView
+        android:id="@+id/text_main_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_replay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_time_start"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_23" />
+
+    <TextView
+        android:id="@+id/text_main_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_prev"
+        app:layout_constraintEnd_toStartOf="@id/text_main_play"
+        app:layout_constraintTop_toBottomOf="@id/text_main_time_start"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginRight="@dimen/dp_62" />
+
+    <TextView
+        android:id="@+id/text_main_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_time_start"
+        android:layout_marginTop="@dimen/dp_38" />
+
+    <TextView
+        android:id="@+id/text_main_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_next"
+        app:layout_constraintStart_toEndOf="@id/text_main_play"
+        app:layout_constraintTop_toBottomOf="@id/text_main_time_start"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_62" />
+
+    <TextView
+        android:id="@+id/text_main_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_time_start"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginRight="@dimen/dp_23" />
 </androidx.constraintlayout.widget.ConstraintLayout>
